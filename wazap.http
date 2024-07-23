@@ -1,0 +1,24 @@
+
+POST http://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "marti",
+    "email": "alog@mes"
+}
+
+### rebre tots els users
+GET http://localhost:3000/api/users/prova
+
+
+### rebre tots els missatges
+GET http://localhost:3000/api/messages 
+
+### rebre tots els grups
+GET http://localhost:3000/api/groups 
+
+### rebre tots els missatges d'un grup
+GET http://localhost:3000/api/messages/group/1 
+
+
+

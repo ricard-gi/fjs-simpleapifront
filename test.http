@@ -1,0 +1,31 @@
+
+POST http://localhost:3000/api/alumnes HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "marti",
+    "email": "alog@mes"
+}
+
+### rebre tots els alumnes
+
+GET http://localhost:3000/api/alumnes 
+
+
+### rebre un sol alumne
+
+GET http://localhost:3000/api/alumnes/1
+
+###
+PUT http://localhost:3000/api/alumnes/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "sara",
+    "email": "sara@gmail.com"
+}
+
+
+###
+
+DELETE http://localhost:3000/api/alumnes/15
