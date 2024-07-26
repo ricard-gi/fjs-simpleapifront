@@ -33,6 +33,10 @@ router.get('/', autentica, function (req, res, next) {
 
 });
 
+router.get('/secret', autentica, function (req, res, next) {
+res.json({ok:true, data: "paraula secreta"})
+});
+
 
 
 router.get('/:id', function (req, res, next) {
@@ -109,7 +113,7 @@ router.post('/login', (req, res) => {
                   expiredAt: new Date().getTime() + durada,
                   perfil: "administrador",
                   idioma: "catala",
-                  nom:usuari.nom,
+                  name:usuari.name,
                   id: usuari.id,
                 },
                 secretKey

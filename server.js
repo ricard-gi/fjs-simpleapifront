@@ -4,12 +4,14 @@ import alumnesRouter from './rutas/alumnesRouter.js';
 import usersRouter from './rutas/usersRouter.js';
 import groupsRouter from './rutas/groupsRouter.js';
 import messagesRouter from './rutas/messagesRouter.js';
+import cors from 'cors';
+
 
 //instanciamos nueva aplicación express
 const app = express();
 
 app.use(express.json());
-
+app.use(cors());
 
 
 //las rutas que empiecen por /api/alumnes se dirigirán a alumnesRouter
