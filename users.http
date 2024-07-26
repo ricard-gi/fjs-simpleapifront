@@ -1,0 +1,15 @@
+
+POST http://localhost:3001/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "name": "adrian",
+    "password": "1234"
+}
+
+### rebre tots els users
+GET http://localhost:3001/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVkQXQiOjE3MjIwMTIyNzI0OTEsInBlcmZpbCI6ImFkbWluaXN0cmFkb3IiLCJpZGlvbWEiOiJjYXRhbGEiLCJpZCI6NCwiaWF0IjoxNzIyMDA4NjcyfQ.SE6FTn4zxpzGEWEmyNOgh606lNwladb3iSijVRL23Z8
+
+
+
