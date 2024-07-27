@@ -36,7 +36,7 @@ function Llista() {
   }, [])
 
   function eliminaUsuari() {
-    fetch(URL + "/api/user/" + elimina.id, { method: "DELETE" })
+    fetch(URL + "/api/users/" + elimina.id, { method: "DELETE" })
       .then(results => results.json())
       .then(res => {
         console.log("resultats: ", res);
@@ -58,6 +58,7 @@ function Llista() {
     <tr key={el.id}>
       <td>{el.id}</td>
       <td>{el.name}</td>
+      <td><img src={URL+'/img/'+el.image} alt={el.name} width={'150px'}/></td>
     </tr>
   );
 
@@ -75,6 +76,7 @@ function Llista() {
               <tr>
                 <th>#</th>
                 <th>name</th>
+                <th>foto</th>
               </tr>
             </thead>
             <tbody>
