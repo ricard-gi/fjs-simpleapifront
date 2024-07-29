@@ -19,13 +19,13 @@ export default () => {
       headers: { 'Content-Type': 'application/json' },
     };
   
-    return fetch(API_URL + "/open", requestOptions)
+    return fetch(API_URL + "/users/open", requestOptions)
       .then(response => response.json())
       .then(response => {
         if (response.ok){
           setResposta(response.data);
         }else{
-          setResposta('ERROR')
+          setResposta('Error connectant a la API')
         }
       })
       .catch(error => console.log(error));
@@ -38,7 +38,6 @@ export default () => {
     <main style={{ padding: "1rem 0" }}>
     <h2>Open...</h2>
     <h3>{resposta}</h3>
-    <Button onClick={()=>goTo("/")} >goto inici</Button>
   </main>
   );
 };

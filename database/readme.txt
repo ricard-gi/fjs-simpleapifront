@@ -1,5 +1,5 @@
 1.
-inicialitzar docker
+inicialitzar docker desktop a l'ordinador
 
 2.
 docker-compose up -docker

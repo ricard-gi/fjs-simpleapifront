@@ -23,7 +23,7 @@ export default () => {
         if (response.ok){
           setResposta(response.data);
         }else{
-          setResposta('ERROR')
+          setResposta('Error connectant a la API')
         }
       })
       .catch(error => console.log(error));

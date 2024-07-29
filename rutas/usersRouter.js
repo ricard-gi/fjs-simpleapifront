@@ -50,11 +50,11 @@ router.get('/', autentica, function (req, res, next) {
 });
 
 router.get('/secret', autentica, function (req, res, next) {
-    res.json({ ok: true, data: "paraula secreta: aicnalubma!" });
+    res.json({ ok: true, data: "això només ho veuen els usuaris autenticats" });
 });
 
 router.get('/open', function (req, res, next) {
-    res.json({ ok: true, data: "paraula no protegida: 1234" });
+    res.json({ ok: true, data: "això ho veu tothom" });
 });
 
 // nou usuari amb imatge

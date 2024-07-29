@@ -73,25 +73,22 @@ function App() {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 {/* <Link to="/nou_article" className='nav-link'>Article nou</Link> */}
-                <Link to="/registre" className='nav-link'>Registre</Link>
-                <Link to="/usuaris" className='nav-link'>Usuaris</Link>
+                <Link to="/registre" className='nav-link'>Registre</Link> 
+                {username ?
+                   <Link to="/usuaris" className='nav-link'>Usuaris</Link>
+                : <></>}
                 <Link to="/open" className='nav-link'>Open</Link>
                 <Link to="/secret" className='nav-link'>Secret</Link>
               </Nav>
             </Navbar.Collapse>
             {username ?
-              <>
-                <span className='nav-item pointer' onClick={logout}>Logout</span>
-                <span className="nav-item ms-1">({username})</span>
-              </>
+                <span className='nav-item pointer' onClick={logout}>Logout ({username})</span>
               : <span onClick={() => setShow(true)} className="nav-item pointer">Login</span>
             }
           </Container>
         </Navbar>
         <Container>
           <Outlet />
-          <br />
-          {token}
         </Container>
       </UserContext.Provider>
 

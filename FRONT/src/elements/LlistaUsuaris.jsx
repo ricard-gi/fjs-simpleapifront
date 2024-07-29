@@ -66,7 +66,7 @@ function Llista() {
     <>
       <TitolContainer>
         <h3>Usuaris</h3>
-        <Link className="btn btn-success" to={"/nou_usuari"}>Afegir usuari</Link>
+        <Link className="btn btn-success" to={"/registre"}>Afegir usuari</Link>
       </TitolContainer>
       <ToastContainer />
       <Row>
